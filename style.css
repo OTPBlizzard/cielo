@@ -1,0 +1,235 @@
+body{
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container1{
+  background: linear-gradient(#051327,#000);
+  position: fixed;
+  inset: 0;
+}
+
+.space{
+  --size: 2px;
+  --space-layer:
+  4vw 50vh 0 #fff,
+  18vw 88vh 0 #fff;
+  --border:50%;
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+  box-shadow: var(--space-layer );
+  position: absolute;
+  top: 0;
+  border-radius: var(--border);
+  left: 0;
+  opacity: 75%;
+  animation: moveStar var(--duration, 20s) linear infinite;
+}
+.contenedor-moon{
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.moon{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #9fb0df;
+  box-shadow: 0 0 20px #fff,
+              inset -50px 0 30px #585858;
+  margin: 100px auto;
+  z-index: 100;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+@keyframes text_color {
+  to{
+    background-position-x: 169px;
+  }
+}
+
+
+
+
+
+@keyframes moveStar {
+  from {
+    transform: translateY(-100vh);
+  }
+
+  to{
+    transform: translateY(0);
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 120px;
+  height: 2px;
+  background: url(IMG/shooting-star.png);
+  background-size: 100%;
+  transform: rotate(20deg);
+  box-shadow: 1px 3px 3px 0 #dddddd;
+}
+
+.shooting-star-1 {
+  top: 5px;
+  animation: 2s shooting-star infinite;
+}
+
+.shooting-star-2 {
+  top: 49px;
+  animation: 5s shooting-star infinite 4s;
+}
+
+.shooting-star-3 {
+  top: 64px;
+  animation: 8s shooting-star infinite 7s;
+}
+
+.shooting-star-4 {
+  top: 29px;
+  animation: 5s shooting-star infinite 10s;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(25deg);
+  }
+  100% {
+    transform: translate3d(calc(130vw - 100px), calc(120vh - 100px), 0) rotate(25deg);
+
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  body{
+    background: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+  .container1{
+    background: linear-gradient(#051327,#000);
+    position: fixed;
+    inset: 0;
+  }
+  
+  .space{
+    --size: 2px;
+    --space-layer:
+    4vw 50vh 0 #fff,
+    18vw 88vh 0 #fff;
+    --border:50%;
+    width: var(--size);
+    height: var(--size);
+    background: #fff;
+    box-shadow: var(--space-layer );
+    position: absolute;
+    top: 0;
+    border-radius: var(--border);
+    left: 0;
+    opacity: 75%;
+    animation: moveStar var(--duration, 20s) linear infinite;
+  }
+  
+  .contenedor-moon{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .moon{
+    width: 250px;
+    height: 250px;
+    background: #9fb0df;
+    box-shadow: 0 0 20px #fff,
+                inset -50px 0 30px #585858; 
+    z-index: 100;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+
+
+
+  
+  
+  
+  @keyframes moveStar {
+    from {
+      transform: translateY(-100vh);
+    }
+  
+    to{
+      transform: translateY(0);
+    }
+  }
+  
+  .shooting-star {
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 120px;
+    height: 2px;
+    background: url(IMG/shooting-star.png);
+    background-size: 100%;
+    transform: rotate(20deg);
+    box-shadow: 1px 3px 3px 0 #dddddd;
+  }
+  
+  .shooting-star-1 {
+    top: 5px;
+    animation: 2s shooting-star infinite 2s;
+  }
+  
+  
+  .shooting-star-2 {
+    top: 64px;
+    animation: 1s shooting-star infinite 10s;
+  }
+  
+  .shooting-star-3 {
+    top: 79px;
+    animation: 1s shooting-star infinite 15s;
+  }
+  
+  
+  
+  @keyframes shooting-star {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(60deg);
+    }
+    100% {
+      transform: translate3d(calc(130vw - 100px), calc(130vh - 100px), 0) rotate(60deg);
+  
+    }
+  }
+}
